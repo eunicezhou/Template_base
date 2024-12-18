@@ -1,0 +1,22 @@
+{% extends "layer.html" %}
+
+{% block menuButton %}
+    <input type="checkbox" name="" id="sideMenu-active" />
+{% endblock %}
+
+{% block siteMenu_label %}
+    <!-- <label for="sideMenu-active">
+        <i class="fas fa-angle-right">展開</i>
+    </label> -->
+{% endblock %}
+
+{% block right_contain%}
+    {% block breadcrumb %}
+        <a href="{{ url_for('get_accounts') }}">Page 1</a>
+    {% endblock %}
+{% endblock %}
+
+{% block style%}
+    {{super()}}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/page.css') }}">
+{% endblock %}

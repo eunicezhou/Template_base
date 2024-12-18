@@ -1,0 +1,28 @@
+{% extends 'layer.html' %}
+
+{% block title %}
+    <title>Layer 1</title>
+{% endblock %}
+
+{% block left_bar %}
+{% block menuButton %}
+
+{% endblock %}
+<div class="sideMenu flex-column bg-secondary-subtle">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link text-center" href="{{ url_for('function_1_layer_1') }}">Layer 1-1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center" href="{{ url_for('function_1_layer_2') }}">Layer 1-2</a>
+        </li>
+    </ul>
+    {% block siteMenu_label %}
+    
+    {% endblock %}
+</div>
+{% endblock %}
+
+{% block breadcrumb %}
+<a href="{{ url_for('function_1') }}">Function 1 /</a>
+{% endblock %}

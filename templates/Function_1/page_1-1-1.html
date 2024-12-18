@@ -1,0 +1,23 @@
+{% extends "Function_1/layer_1-1.html" %}
+
+{% block menuButton %}
+    <input type="checkbox" name="" id="sideMenu-active"/>
+{% endblock %}
+{% block siteMenu_label %}
+    <label for="sideMenu-active">
+        <b class="fas fa-angle-right">展開</b>
+    </label>
+{% endblock %}
+
+ 
+{% block right_contain%}
+    {% block breadcrumb %}
+        {{super()}}
+        <a href="{{ url_for('function_1_layer_1_page_1') }}">Page 1-1</a>
+    {% endblock %}
+{% endblock %}
+
+{% block style%}
+    {{super()}}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/page.css') }}">
+{% endblock %}
